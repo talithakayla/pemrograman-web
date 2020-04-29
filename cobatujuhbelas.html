@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Soal 2</title>
+</head>
+<body >
+	<p id="coba"></p>
+
+	<script type="text/javascript">
+		var harga = prompt("masukkan Harga : Rp. ");
+
+			function diskon(harga){
+				var diskon;
+				diskon = 0.1 * harga;
+				hargadiskon = harga - diskon;
+				return hargadiskon;
+			}
+
+			if (harga >= 100000){
+				document.getElementById("coba").innerHTML = "Harga Input: "+ harga + " diskon" + diskon(harga);
+			} else if (harga < 100000){
+				document.getElementById("coba").innerHTML = "Harga Input: "+ harga + " diskon 0";
+			}
+		
+
+		
+		
+
+	</script>
+</body>
+</html>

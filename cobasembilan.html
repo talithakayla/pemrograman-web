@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<form id="test">
+		<select id="mySelect" size="8">
+			<option>Apple</option><option>Pear</option><option>Banana</option>
+			<option>Orange</option>
+		</select><br/>
+		<button type="button" onclick="myFunction('first')">Insert First</button>
+		<button type="button" onclick="myFunction('last')">Insert last</button><br/>
+		Jenis Kelamin :
+		<input type='radio' name='jk' value='laki-laki' onchange="test()"/> Laki-laki
+		<input type='radio' name='jk' value='perempuan' onchange="test()"/> Perempuan
+		<br/>
+		Pilih Jawaban :
+		<label><input type="radio" name="pil" value="A" onchange="test1()"/>A</label>
+		<label><input type="radio" name="pil" value="B" onchange="test1()" checked/>B</label>
+		<label><input type="radio" name="pil" value="C" onchange="test1()"/>C</label><br/>
+		Warna background :
+		<input type="button" value="Merah" onClick="warna('red')"/>
+		<input type="button" value="Kuning" onClick="warna('yellow')"/>
+		<input type="button" value="Hijau" onClick="warna('green')"/>
+	</form>
+	<script>
+		function test(){
+			var jk = document.querySelector('input[name="jk"]:checked').value;
+			alert(jk);
+		}
+		function test1(){
+			var form = document.getElementById("test");
+			alert(form.elements["pil"].value);
+		}
+		function myFunction(pos){
+			var x =document.getElementById("mySelect");
+			var option = document.createElement("option");
+			option.text = "Kiwi";
+			if (pos=='first') x.add(option, x[0]); else x.add(option);
+		}
+		function warna (color) {
+		 	document.body.style.background = color;
+	}
+	</script>
+
+
+</body>
+</html>

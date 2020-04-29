@@ -1,0 +1,32 @@
+<head>
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+</head>
+
+
+<center>
+<table>
+	<tr><td>NIM</td><td>:</td><td><input id="nim" type='text'/></td></tr>
+	<tr><td>Nama</td><td>:</td><td><input id="nama" type='text'/></td></tr>
+	<tr><td>Asal</td><td>:</td><td><input id="asal" type='text'/></td>
+		<td><button id="myButton">Add Row</button></td>
+	</tr>
+</table>
+<hr/>
+<table id="myTable" border='1'>
+	<tr><th>NIM</th><th>Nama</th><th>Asal</th></tr>
+	<tr><td>123456789</td><td>Agus Budiman</td><td>Surabaya</td></tr>
+</table>
+</center>
+<script type="text/javascript">
+	$(document).ready(function(){
+ 		$("#myButton").click(function()	{
+			var table = $("#myTable");
+			var nim = $("#nim").val();
+			var nama = $("#nama").val();
+			var asal = $("#asal").val();
+			table.append("<tr><td>"+nim+"</td><td>"+nama+"</td><td>"+asal+"</td></tr>");
+
+		});
+
+  	});
+</script>
